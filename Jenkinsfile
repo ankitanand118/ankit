@@ -24,6 +24,14 @@ pipeline {
                 
                  }
         }
+
+        stage('test') {
+            steps {
+	    retry{4}
+                sh "mvn clean test"
+
+                 }
+   
         
         
          
